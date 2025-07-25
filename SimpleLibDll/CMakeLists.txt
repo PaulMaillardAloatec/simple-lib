@@ -1,4 +1,5 @@
 include(GNUInstallDirs)
+include(CMakePackageConfigHelpers)
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
@@ -21,6 +22,13 @@ endif()
 if (WIN32)
     target_compile_definitions(SimpleLibDll PRIVATE SIMPLELIBDLL_EXPORTS)
 endif()
+
+
+configure_package_config_file(
+    ${CMAKE_CURRENT_LIST_DIR}/cmake/Config.cmake.in
+    ${CMAKE_CURRENT_BINARY_DIR}/SimpleLibDllConfig.cmake
+    INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/SimpleLib
+)
 
 # Installation de la DLL + .lib
 install(TARGETS SimpleLibDll
