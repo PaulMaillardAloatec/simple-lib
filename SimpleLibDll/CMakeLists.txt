@@ -39,5 +39,5 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/
 install(EXPORT SimpleLibTargets
     FILE SimpleLibTargets.cmake
     NAMESPACE SimpleLib::
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/SimpleLib
+    DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/alib-simple-lib
 )
