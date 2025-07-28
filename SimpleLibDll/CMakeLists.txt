@@ -31,7 +31,7 @@ configure_package_config_file(
 )
 
 install(
-    FILES "${CMAKE_CURRENT_BINARY_DIR}/SimpleLibDllConfig.cmake"
+    FILES "${CMAKE_CURRENT_BINARY_DIR}/SimpleLibConfig.cmake"
     DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/SimpleLib"
 )
 
