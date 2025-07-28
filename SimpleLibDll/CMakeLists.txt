@@ -27,12 +27,12 @@ endif()
 configure_package_config_file(
     ${CMAKE_CURRENT_LIST_DIR}/cmake/Config.cmake.in
     ${CMAKE_CURRENT_BINARY_DIR}/SimpleLibConfig.cmake
-    INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/SimpleLib
+    INSTALL_DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/alib-simple-lib
 )
 
 install(
     FILES "${CMAKE_CURRENT_BINARY_DIR}/SimpleLibConfig.cmake"
-    DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/SimpleLib"
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/alib-simple-lib"
 )
 
 # Installation de la DLL + .lib
