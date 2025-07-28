@@ -27,12 +27,12 @@ endif()
 configure_package_config_file(
     ${CMAKE_CURRENT_LIST_DIR}/cmake/Config.cmake.in
     ${CMAKE_CURRENT_BINARY_DIR}/SimpleLibConfig.cmake
-    INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/SimpleLib
+    INSTALL_DESTINATION ${INSTALL_CONFIG_DIR}
 )
 
 install(
     FILES "${CMAKE_CURRENT_BINARY_DIR}/SimpleLibConfig.cmake"
-    DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/SimpleLib"
+    DESTINATION "${INSTALL_CONFIG_DIR}"
 )
 
 # Installation de la DLL + .lib
@@ -52,5 +52,5 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/
 install(EXPORT SimpleLibTargets
     FILE SimpleLibTargets.cmake
     NAMESPACE SimpleLib::
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/SimpleLib
+    DESTINATION ${INSTALL_CONFIG_DIR}
 )
