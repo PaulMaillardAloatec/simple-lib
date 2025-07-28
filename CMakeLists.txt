@@ -10,6 +10,4 @@ endif()
 
 add_compile_definitions()
 
-
-
 add_subdirectory ("SimpleLibDll")
